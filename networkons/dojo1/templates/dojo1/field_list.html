@@ -1,4 +1,3 @@
-
 <table>
 {% for field in field_list %}
 <tr>
@@ -7,4 +6,21 @@
 </tr>
 {% endfor %}
 </table>
+
+<div id="map" style="width: 300px; height: 300px;">
+</div>
+
+<script src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=REPLACE_YOUR_KEY&amp;submodules=panorama,geocoder,drawing,visualization"></script>
+
+<script>
+var map = new naver.maps.Map('map', {
+	center: new naver.maps.LatLng(37.3595704, 127.105399),
+	zoom: 7
+});
+
+var marker = new naver.maps.Marker({
+	map: map,
+	position: new naver.maps.LatLng(37.3595704, 127.105399)
+});
+</script>
 
