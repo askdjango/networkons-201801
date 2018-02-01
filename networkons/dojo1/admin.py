@@ -1,5 +1,11 @@
 from django.contrib import admin
-from .models import Field
+from .models import Customer, Field
+
+
+class CustomerAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Customer, CustomerAdmin)
 
 
 class FieldAdmin(admin.ModelAdmin):
