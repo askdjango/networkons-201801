@@ -1,0 +1,9 @@
+안녕하세요. {{ name }}님.
+
+신청하신 건들에 대한 처리가 끝났습니다. 내역은 아래와 같습니다.
+
+{% for record in record_list %}- {{ record.name }}: {{ record.created_at }}
+{% endfor %}
+총 비용은 {{ amount }}원입니다.
+
+감사합니다.
