@@ -31,3 +31,13 @@ class Field(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+
+class Place(models.Model):
+    voc_type = models.CharField(max_length=20)
+    try_nm = models.CharField(max_length=2)
+    sgg_nm = models.CharField(max_length=3)
+    emd_nm = models.CharField(max_length=5)
+    latitute = models.FloatField()
+    longitude = models.FloatField()
+    occr_date = models.DateField()
+

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer, Field
+from .models import Customer, Field, Place
 
 
 class CustomerAdmin(admin.ModelAdmin):
@@ -25,4 +25,10 @@ class FieldAdmin(admin.ModelAdmin):
         self.message_user(request, '{}건을 닫힘상태로 변경했습니다.'.format(count))
 
 admin.site.register(Field, FieldAdmin)
+
+
+class PlaceAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Place, PlaceAdmin)
 
