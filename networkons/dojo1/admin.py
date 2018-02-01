@@ -3,7 +3,7 @@ from .models import Field
 
 
 class FieldAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'latlng']
+    list_display = ['id', 'name', 'latlng', 'status']
 
 admin.site.register(Field, FieldAdmin)
 
