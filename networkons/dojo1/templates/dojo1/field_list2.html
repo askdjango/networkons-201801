@@ -28,7 +28,8 @@ var map = new naver.maps.Map('map', {
     {% endif %}
     var marker = new naver.maps.Marker({
         map: map,
-        position: new naver.maps.LatLng({{ row.latitute }}, {{ row.longitude }})
+        position: new naver.maps.LatLng({{ row.latitute }}, {{ row.longitude }}),
+        title: "{{ row.voc_type }}"
     });
 {% endfor %}
             </script>
