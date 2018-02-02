@@ -51,6 +51,9 @@ class Record(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ['-id']
+
     def get_pandas_dataframe(self):
         ext = os.path.splitext(self.file.path)[1].lower()
 
