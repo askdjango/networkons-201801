@@ -123,3 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# FIXME: 네이버 맵, API KEY - 본인 키를 적용해주세요.
+NAVER_MAP_API_KEY = ''

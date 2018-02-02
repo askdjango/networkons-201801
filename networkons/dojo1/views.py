@@ -32,5 +32,6 @@ def field_list2(request):
         # 'df': df,
         'place_list': qs,
         'q': q,
+        'NAVER_MAP_API_KEY': settings.NAVER_MAP_API_KEY,
     })
 
