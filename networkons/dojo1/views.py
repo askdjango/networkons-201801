@@ -3,7 +3,7 @@ import pandas as pd
 from django.conf import settings
 from django.db.models import Q
 from django.shortcuts import render
-from .models import Field, Place
+from .models import Field, Place, Record
 
 
 def field_list(request):
@@ -34,3 +34,11 @@ def field_list2(request):
         'q': q,
         'NAVER_MAP_API_KEY': settings.NAVER_MAP_API_KEY,
     })
+
+
+def record_list(request):
+    qs = Record.objects.all()
+    return render(request, 'dojo1/record_list.html', {
+        'record_list': qs,
+    })
+
