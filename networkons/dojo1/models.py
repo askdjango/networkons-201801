@@ -1,4 +1,6 @@
+import os
 import re
+import pandas as pd
 from django import forms
 from django.db import models
 
@@ -48,3 +50,13 @@ class Record(models.Model):
     file = models.FileField(upload_to='%Y%m%d')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def get_pandas_dataframe(self):
+        ext = os.path.splitext(self.file.path)[1].lower()
+
+        if ext == '.csv':
+            return pd.read_csv(self.file.path)
+        elif ext in ['.xls', '.xlsx']:
+            return pd.read_excel(self.file.path)
+
+        return None

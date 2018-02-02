@@ -1,0 +1,18 @@
+{% extends "dojo1/layout.html" %}
+
+{% block content %}
+
+    {{ record.name }}
+    {{ record.file }}
+
+    <table>
+        <tbody>
+            {% for index, row in df.iterrows %}
+            <tr>
+                <td>{{ row.comp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}

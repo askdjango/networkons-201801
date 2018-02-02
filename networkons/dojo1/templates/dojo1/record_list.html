@@ -13,7 +13,11 @@
                         <tbody>
                             {% for record in record_list %}
                                 <tr>
-                                    <td>{{ record.name }}</td>
+                                    <td>
+                                        <a href="/dojo1/record/{{ record.pk }}/">
+                                            {{ record.name }}
+                                        </a>
+                                    </td>
                                     <td>
                                         <a href="{{ record.file.url }}">
                                             다운받기

@@ -42,3 +42,10 @@ def record_list(request):
         'record_list': qs,
     })
 
+def record_detail(request, pk):
+    record = Record.objects.get(pk=pk)
+    df = record.get_pandas_dataframe()
+    return render(request, 'dojo1/record_detail.html', {
+        'record': record,
+        'df': df,
+    })
