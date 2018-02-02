@@ -125,4 +125,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # FIXME: 네이버 맵, API KEY - 본인 키를 적용해주세요.
-NAVER_MAP_API_KEY = ''
+NAVER_MAP_API_KEY = 'yHHIYl4B0yPlcCfkX_0z'
