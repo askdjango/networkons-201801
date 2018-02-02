@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer, Field, Place
+from .models import Customer, Field, Place, Record
 
 
 class CustomerAdmin(admin.ModelAdmin):
@@ -32,3 +32,8 @@ class PlaceAdmin(admin.ModelAdmin):
 
 admin.site.register(Place, PlaceAdmin)
 
+
+class RecordAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Record, RecordAdmin)

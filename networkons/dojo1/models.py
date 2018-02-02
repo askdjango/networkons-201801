@@ -42,3 +42,9 @@ class Place(models.Model):
     occr_date = models.DateField()
     photo = models.ImageField(blank=True)
 
+
+class Record(models.Model):
+    name = models.CharField(max_length=100)
+    file = models.FileField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

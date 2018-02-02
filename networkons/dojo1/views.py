@@ -34,4 +34,3 @@ def field_list2(request):
         'q': q,
         'NAVER_MAP_API_KEY': settings.NAVER_MAP_API_KEY,
     })
-
