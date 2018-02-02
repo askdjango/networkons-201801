@@ -45,6 +45,6 @@ class Place(models.Model):
 
 class Record(models.Model):
     name = models.CharField(max_length=100)
-    file = models.FileField()
+    file = models.FileField(upload_to='%Y%m%d')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
