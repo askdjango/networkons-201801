@@ -14,7 +14,11 @@
                             {% for record in record_list %}
                                 <tr>
                                     <td>{{ record.name }}</td>
-                                    <td>{{ record.file }}</td>
+                                    <td>
+                                        <a href="{{ record.file.url }}">
+                                            다운받기
+                                        </a>
+                                    </td>
                                 </tr>
                             {% endfor %}
                         </tbody>
