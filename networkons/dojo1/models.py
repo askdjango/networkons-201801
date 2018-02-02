@@ -40,4 +40,5 @@ class Place(models.Model):
     latitute = models.FloatField()
     longitude = models.FloatField()
     occr_date = models.DateField()
+    photo = models.ImageField(blank=True)
 
